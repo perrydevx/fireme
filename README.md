@@ -1,9 +1,8 @@
 ##Fireme.com
-<hari modify this>
-fireme.com is a web application that list job applicants who have tendered their resignation and is serving their notice period
+fireme.com is a web application that list job applicants who have tendered their resignation and is serving notice period.
 
 ##Description
-<todo>
+Intial application, Login page, Applicant list page, Applicant registration page.
 
 ##Instructions 
 1. pull project
