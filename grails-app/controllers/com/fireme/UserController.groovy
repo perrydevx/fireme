@@ -21,7 +21,7 @@ class UserController {
         println '------------------------> CREATE ACCOUNT'
         respond new User(params)
     }
-
+	
     @Transactional
     def save(User user) {
 

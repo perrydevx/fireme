@@ -25,4 +25,10 @@ class User {
         recruiter nullable: true
         applicant nullable: true
     }
+
+	@Override
+	public String toString() {
+		return firstName +" "+ lastName;
+	}	
+	
 }

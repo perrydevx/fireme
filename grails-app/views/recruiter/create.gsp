@@ -62,60 +62,17 @@
                     </div>
 
 
-                    <!-- APPLICANT FIELDS -->
-                    <g:if test="${request.getParameter('type').equals('applicant')}">
-	                    <div id="applicant">
-		                    <div class='fieldcontain'>
-		                        <label for='applicant.currentEmployment'>Current Employment</label>
-		                        <g:textField name="applicant.currentEmployment" value="${user.applicant?.currentEmployment}" maxlength="30"/>
-		                    </div>
-		
-		                   <div class='fieldcontain required'>
-		                        <label for='applicant.noticePeriodDays'>Notice Period (Days)<span class='required-indicator'>*</span></label>
-		                        <g:textField name="applicant.noticePeriodDays" value="${user.applicant?.noticePeriodDays}" required="" maxlength="30"/>
-		                    </div>
-		
-		                    <div class='fieldcontain required'>
-		                        <label for='applicant.primarySkill'>Primary Skills<span class='required-indicator'>*</span></label>
-		                        <g:select name="applicant.primarySkill" from="${['Java','.NET','Mainframe','Others']}" value="${user.applicant?.primarySkill}"/>
-		                    </div>
-		
-
-		                    <div class='fieldcontain required'>
-		                        <label for='applicant.accountVisibility'>Account Visibility<span class='required-indicator'>*</span></label>
-		                        <g:select name="applicant.accountVisibility" from="${['Show','Hide']}" value="${user.applicant?.accountVisibility}"/>
-		                    </div>
-
-		                   <div class='fieldcontain required'>
-		                        <label for='applicant.resume'>resume<span class='required-indicator'>*</span></label>
-		                        <g:textField name="applicant.resume" value="${user.applicant?.resume}" required="" maxlength="30"/>
-		                    </div>
-
-						</div>
-					</g:if>
-                    <!--
-                    <div class='fieldcontain required'>
-                        <label for='applicant.resume'>resume</label>
-                        <g:uploadForm name="applicant.resume">
-                            <input type="file" name="applicant.resume" />
-                        </g:uploadForm>
-                    </div>
-                    -->
-                    
                     <!-- RECRUITER FIELDS -->
-                    <g:if test="${request.getParameter('type').equals('recruiter')}">
-	                    <div id="recruiter">
-		                    <div class='fieldcontain'>
-		                        <label for='recruiter.orgName'>Organization Name</label>
-		                        <g:textField name="recruiter.orgName" value="${user.recruiter?.orgName}" maxlength="30"/>
-		                    </div>
-		
-		                   <div class='fieldcontain required'>
-		                        <label for='recruiter.orgPhone'>Organization Phone<span class='required-indicator'>*</span></label>
-		                        <g:textField name="recruiter.orgPhone" value="${user.recruiter?.orgPhone}" required="" maxlength="30"/>
-		                    </div>
-	                    </div>
-                    </g:if>
+                    <div class='fieldcontain'>
+                        <label for='recruiter.orgName'>Organization Name</label>
+                        <g:textField name="recruiter.orgName" value="${user.recruiter?.orgName}" maxlength="30"/>
+                    </div>
+
+                   <div class='fieldcontain required'>
+                        <label for='recruiter.orgPhone'>Organization Phone<span class='required-indicator'>*</span></label>
+                        <g:textField name="recruiter.orgPhone" value="${user.recruiter?.orgPhone}" required="" maxlength="30"/>
+                    </div>
+
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />

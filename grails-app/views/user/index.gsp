@@ -31,14 +31,26 @@
                 </thead>
                 <tbody>
                     <g:each in="${userList}">
-                        <tr>
-                            <td><a href="/user/show/${it.id}">${it.firstName} ${it.lastName}</a></td>
-                            <td>${it.userEmail}</td>
-                            <td>${it.applicant.primarySkill}</td>
-                            <td><strong>${it.applicant.noticePeriodDays}</strong> Days</td>
-                            <td>${it.applicant.currentEmployment}</td>
-                        </tr>
-                    </g:each>
+			            <g:if test="${it.userType.equals('Applicant')}">
+	                        <tr>
+	                            <td><a href="/user/show/${it.id}">${it.firstName} ${it.lastName}</a></td>
+	                            <td>${it.userEmail}</td>
+	                            <td>${it.applicant.primarySkill}</td>
+	                            <td><strong>${it.applicant.noticePeriodDays}</strong> Days</td>
+	                            <td>${it.applicant.currentEmployment}</td>
+	                        </tr>
+	                </g:if>
+                        </g:each>
+                        <g:each in="${userList}">
+	                <g:if test="${it.userType.equals('Recruiter')}">
+	                        <tr>
+	                            <td><a href="/user/show/${it.id}">${it.firstName} ${it.lastName}</a></td>
+	                            <td>${it.userEmail}</td>
+	                            <td>${it.recruiter.orgName}</td>
+	                            <td><strong>${it.recruiter.orgPhone}</strong></td>
+	                        </tr>
+	                </g:if>    </g:each>
+                    
                 </tbody>
             </table>
 
