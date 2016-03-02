@@ -133,7 +133,7 @@
                 <button type="button" onclick="window.location='user/index'">Sign in</button>
                 <br><br>
                 <div><a href="user/create?type=applicant">Create account</a></div>
-                <div><a href="user/create?type=recruiter">New Recruiter?</a></div>
+                <div><a href="user/create?type=recruiter">New Recruiter</a></div>
             </fieldset>
         </g:form>
 
